@@ -34,36 +34,45 @@
             </p>
         </section>
 
-        <section id="projets">
-            <h2>Mes projets</h2>
+        <section id="projects">
+        <section id="projects">
+        <h2>Mes Projets</h2>
 
-            <article>
-                <h3>Todo List</h3>
-                <p>Application web en HTML, CSS, JavaScript, sql et node.js</p>
-            </article>
-
-            <article>
-                <h3>digital resume</h3>
-                <p>Site web en html, css, JavaScript, sql et node.js</p>
-            </article>
-
-            <article>
+            <div class="project" data-title="Portfolio" data-description="Mon portfolio personnel pour présenter mes projets et compétences." data-tech="HTML, CSS, JavaScript" data-link="file://wsl.localhost/Ubuntu/home/elroi/pool2026-software-Christy-92/day1/portfolio/index.html">
                 <h3>Portfolio</h3>
-                <p>Site web en html, css et JavaScript</p>
-            </article>
+                <p class="see-details">Cliquez pour voir</p>
+            </div>
+
+            <div class="project" data-title="Todo App" data-description="Application pour gérer mes tâches quotidiennes." data-tech="TypeScript, HTML, CSS, Node js, sql" data-link="file://wsl.localhost/Ubuntu/home/elroi/B-WEB-101-PAR-1-1-etodo-30/public/front_end/index.html">
+                <h3>Todo app</h3>
+                <p class="see-details">Cliquez pour voir</p>
+            </div>
+
+            <div class="project" data-title="Game Room" data-description="Site pour comparer les prix des jeux vidéo sur plusieurs plateformes et de pouvoir les noté afin de permettre au autres utilisateur d'avoir une idée du jeu." data-tech="JavaScript, API, figma, react" data-link="https://697a2d8075ffab007d3882d5--benevolent-stardust-a9f78c.netlify.app/">
+                <h3>Game room</h3>
+                <p class="see-details">Cliquez pour voir</p>
+            </div>
         </section>
 
+        <!-- Zone pour afficher les détails -->
+        <div id="project-details" class="hidden">
+            <button id="close-details">X</button>
+                <h3 id="detail-title"></h3>
+                <p id="detail-description"></p>
+                <p><strong>Technologies :</strong> <span id="detail-tech"></span></p>
+                <a id="detail-link" href="#" target="_blank">Voir le projet</a>
+        </div>
     </main>
 
-    <footer id="contact">
-        <p>© 2026 - Christy BATINA</p>
-
-        <ul>
-            <li>LinkedIn : <a href="#">Christy BATINA</a></li>
-            <li>GitHub : <a href="#">github.com/christy-92</a></li>
-            <li>gmail : <a href="#">christybatina9@gmail.com</a></li>
-        </ul>
-    </footer>
+    <footer>
+    <p>Me suivre sur les réseaux :</p>
+    <ul>
+        <li><a href="https://www.linkedin.com/in/christy-batina-4a9334389?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://github.com/Christy-92/christy-workshop-git-github" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a>Gmail : christybatina9@gmail.com</a></li>
+    </ul>
+    <p>&copy; 2026 Mon Portfolio</p>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>

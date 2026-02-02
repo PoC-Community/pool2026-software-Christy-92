@@ -70,22 +70,27 @@ section p {
     gap: 1.5rem;
 }
 
-article {
+article, .project {
     background-color: #020617;
     padding: 1.5rem;
     border-radius: 12px;
     border: 1px solid #1e293b;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
 }
 
-article:hover {
+article:hover, .project:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 25px rgba(96, 165, 250, 0.15);
 }
 
-article h3 {
+article h3, .project h3 {
     color: #60a5fa;
     margin-bottom: 0.5rem;
+}
+
+article p, .project p {
+    color: #94a3b8;
 }
 
 /* Buttons */
@@ -131,6 +136,71 @@ footer a:hover {
     color: #e5e7eb;
 }
 
+/* Project Details Popup */
+#project-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0f172a;
+    color: #e5e7eb;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: none; 
+}
+
+#project-details.active {
+    display: block;
+}
+
+#project-details h3 {
+    margin-top: 0;
+    color: #60a5fa;
+    font-size: 1.5rem;
+}
+
+#project-details p {
+    margin: 0.5rem 0;
+    color: #94a3b8;
+}
+
+#project-details a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #60a5fa;
+    color: #020617;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+#project-details a:hover {
+    opacity: 0.85;
+}
+
+#close-details {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f87171;
+    border: none;
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.2s ease;
+}
+
+#close-details:hover {
+    opacity: 0.8;
+}
+
 /* Responsive */
 @media (min-width: 768px) {
     header {
@@ -150,9 +220,25 @@ footer a:hover {
 
     #projects {
         flex-direction: row;
+        gap: 1.5rem;
     }
 
-    article {
+    article, .project {
         flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    #projects {
+        flex-direction: column;
+    }
+
+    article, .project {
+        width: 100%;
+    }
+
+    #project-details {
+        width: 95%;
+        padding: 1.5rem;
     }
 }
