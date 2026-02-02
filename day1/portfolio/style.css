@@ -1,0 +1,158 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background-color: #020617;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #020617;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid #1e293b;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    color: #60a5fa;
+    margin-bottom: 0.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-weight: 500;
+    padding: 0.4rem 0.7rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #60a5fa;
+    color: #020617;
+}
+
+/* Main layout */
+main {
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+section p {
+    color: #94a3b8;
+    max-width: 600px;
+}
+
+/* Projects */
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+article {
+    background-color: #020617;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(96, 165, 250, 0.15);
+}
+
+article h3 {
+    color: #60a5fa;
+    margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #60a5fa;
+    color: #020617;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+/* Footer */
+footer {
+    background-color: #020617;
+    color: #94a3b8;
+    padding: 1.5rem;
+    text-align: center;
+    border-top: 1px solid #1e293b;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 0.8rem;
+}
+
+footer a {
+    color: #94a3b8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e5e7eb;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        margin-bottom: 0;
+    }
+
+    main {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    #projects {
+        flex-direction: row;
+    }
+
+    article {
+        flex: 1;
+    }
+}
